@@ -3,20 +3,25 @@
     src: url('../font/Cyberverse.otf');
 }
 
-*{
+* {
     box-sizing: border-box;
 }
-
 
 body {
     margin: 0;
     font-family: 'cyberverse';
-    background-color: #121212;
+    background-color: black;
 }
-  
-.center {
-    color: #66ff99;
-    font-size: 56px;
+
+.container {
     display: flex;
+    align-items: center;
     justify-content: center;
-  }
+    height: 100vh;
+}
+
+.clock {
+    display: flex;
+    color: rgb(89, 149, 206);
+    font-size: 5rem;
+}

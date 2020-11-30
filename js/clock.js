@@ -1,25 +1,25 @@
 'use strict';
 
-function currentTime() {
-    let date = new Date(); /* creating object of Date class */
-    let hour = date.getHours();
-    let min = date.getMinutes();
-    let sec = date.getSeconds();
-    hour = updateTime(hour);
-    min = updateTime(min);
-    sec = updateTime(sec);
-    document.getElementById("clock").innerText = hour + " : " + min + " : " + sec; /* adding time to the div */
-      let t = setTimeout(function(){ currentTime() }, 1000); /* setting timer */
+const currentTime = () => {
+  let date = new Date();
+  let hour = date.getHours();
+  let min = date.getMinutes();
+  let sec = date.getSeconds();
+  hour = updateTime(hour);
+  min = updateTime(min);
+  sec = updateTime(sec);
+  document.querySelector('.clock').textContent = `${hour}:${min}:${sec}`;
+  let t = setTimeout(function () { currentTime() }, 1000);
+};
+
+const updateTime = (i) => {
+  if (i < 10) {
+    return `0${i}`;
   }
-  
-  function updateTime(k) {
-    if (k < 10) {
-      return "0" + k;
-    }
-    else {
-      return k;
-    }
+  else {
+    return i;
   }
-  
-  currentTime(); /* calling currentTime() function to initiate the process */
+};
+
+currentTime();
 
