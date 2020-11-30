@@ -1,14 +1,22 @@
+@font-face {
+    font-family: 'cyberverse';
+    src: url('../font/Cyberverse.otf');
+}
+
+*{
+    box-sizing: border-box;
+}
+
+
 body {
+    margin: 0;
+    font-family: 'cyberverse';
     background-color: #121212;
-  }
+}
   
-  #clock {
-    font-family: 'Orbitron', sans-serif;
+.center {
     color: #66ff99;
     font-size: 56px;
-  }
-  
-  .center {
     display: flex;
     justify-content: center;
   }
